@@ -252,7 +252,7 @@ public final class Siren: NSObject {
     public private(set) var currentAppStoreVersion: String?
     
     // Private
-    private var appID: Int?
+    /*private*/ public var appID: Int?
     private var lastVersionCheckPerformedOnDate: NSDate?
     private var updaterWindow: UIWindow?
     
@@ -619,7 +619,7 @@ private extension Siren {
         }
     }
     
-    func launchAppStore() {
+    public func launchAppStore() {
         guard let appID = appID else {
             return
         }
