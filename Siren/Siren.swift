@@ -137,7 +137,8 @@ public final class Siren: NSObject {
      Current installed version of your app
      */
     private var currentInstalledVersion: String? = {
-        return NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleShortVersionString") as? String
+        //return NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleShortVersionString") as? String
+        return NSBundle.mainBundle().infoDictionary!["CFBundleShortVersionString"] as? String
     }()
     
     /**
